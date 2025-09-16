@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router";
+import { NavLink,Link } from "react-router";
 
 const Navbar = () => {
   return (
@@ -48,30 +48,28 @@ const Navbar = () => {
         </div>
         <Link className="font-bold text-xl">FlagshipFaceOff</Link>
       </div>
-    
+
       <div className="navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <a>Item 1</a>
+            <NavLink className={({ isActive }) => (isActive ? "text-blue-600" : "")} to="/">Home</NavLink>
           </li>
           <li>
-            <details>
-              <summary>Parent</summary>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </details>
+            <NavLink className={({ isActive }) => (isActive ? "text-blue-600" : "")} to="/about">About</NavLink>
           </li>
           <li>
-            <a>Item 3</a>
+            <NavLink
+              className={({ isActive }) => (isActive ? "text-blue-600" : "")}
+              to="/cart"
+            >
+              Cart
+            </NavLink>
+          </li>
+
+          <li>
+            <NavLink className={({ isActive }) => (isActive ? "text-blue-600" : "")} to="/favorites">Favorites</NavLink>
           </li>
         </ul>
-        <a className="btn">Button</a>
       </div>
     </div>
   );
