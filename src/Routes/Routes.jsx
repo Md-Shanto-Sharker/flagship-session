@@ -14,6 +14,7 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "/",
+        loader:()=>fetch('/phone.json'),
         Component: Home,
       },
       {
@@ -25,7 +26,7 @@ export const router = createBrowserRouter([
         Component: About,
       },
       {
-        path: "/phone-details",
+        path: "/phone-details/:id",
         Component: PhoneDetails,
       },
     ],
