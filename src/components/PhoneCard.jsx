@@ -22,7 +22,7 @@ const PhoneCard = ({ phone }) => {
                 <span className="relative">View Details</span>
               </span>
               <span
-                class="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0"
+                className="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0"
                 data-rounded="rounded-lg"
               ></span>
             </button>
