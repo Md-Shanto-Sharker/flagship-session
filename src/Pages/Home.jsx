@@ -1,12 +1,13 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Hero from "../components/Hero";
 import PhoneContainers from "../components/PhoneContainers";
 import { useLoaderData } from "react-router";
 
 const Home = () => {
   const data = useLoaderData();
-
+  
   const [phones, setPhones] = useState(data);
+
   const handleSearch = (e, text) => {
     e.preventDefault();
 
@@ -18,6 +19,7 @@ const Home = () => {
 
     setPhones(searchedPhones);
   };
+
   return (
     <div>
       <Hero handleSearch={handleSearch}></Hero>

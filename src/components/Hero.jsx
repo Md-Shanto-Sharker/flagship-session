@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
-const Hero = ({ handleSearch }) => {
-  const [searchText,setSearchText] = useState("");
-  // console.log(searchText);
+const Hero = ({handleSearch}) => {
+  const [searchText,setSearchText] = useState('')
+  
   return (
     <div className="py-12">
       <img
@@ -21,13 +21,12 @@ const Hero = ({ handleSearch }) => {
           of the current time - FlagshipFaceOff
         </p>
 
-        <form onSubmit={(e)=>handleSearch(e,searchText)}
+        <form  onSubmit={(e)=>handleSearch(e,searchText)}
           className="flex flex-col md:flex-row justify-center items-center
         mb-4 md:px-24"
         >
           <input
-          value={searchText}
-          onChange={e=>setSearchText(e.target.value)}
+          value={searchText} onChange={(e)=>setSearchText(e.target.value)}
             type="text"
             placeholder="Search Phone by Name"
             className="bg-white border border-gray-300 rounded shadow-md w-2/3 h-12 px-4 mb-3 focus:outline-none focus:shadow-outline md:mr-2 md:mb-0"
