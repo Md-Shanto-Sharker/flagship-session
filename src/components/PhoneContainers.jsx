@@ -11,7 +11,7 @@ const PhoneContainers = ({ phones }) => {
       setDisplayPhones(phones.slice(0, 6));
     }
   }, [phones,showAll]);
-  console.log(phones);
+  // console.log(phones);
   return (
     <div className="py-12 ">
       <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-8 mb-8">
