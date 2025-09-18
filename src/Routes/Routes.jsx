@@ -15,7 +15,7 @@ export const router = createBrowserRouter([
       {
         path: "/",
         hydrateFallbackElement:<p>Loading.....</p>,
-        loader:()=>fetch('/phone.json'),
+        loader:()=>fetch('../phone.json'),
         Component: Home,
       },
       {
@@ -28,6 +28,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/phone-details/:id",
+        loader:()=>fetch('../phone.json'),
         Component: PhoneDetails,
       },
     ],
