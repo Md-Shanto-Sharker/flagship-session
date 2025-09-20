@@ -18,7 +18,7 @@ const PhoneContainers = ({ phones }) => {
     <div className="py-12 ">
       <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-8 mb-8">
         {displayPhones.map((phone) => (
-          <PhoneCard key={phone.id} phone={phone}></PhoneCard>
+          <PhoneCard key={phone.id} phone={phone} ></PhoneCard>
         ))}
       </div>
 
