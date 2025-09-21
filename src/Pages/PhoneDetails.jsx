@@ -8,26 +8,12 @@ const PhoneDetails = () => {
   const data = useLoaderData();
   const { id } = useParams();
 
-
   const singlePhone = data.find((phone) => phone.id === parseInt(id));
-  const {
-    name,
-    image,
-    brand,
-    model,
-    price,
-    description,
-    storage,
-    camera_info,
-  } = singlePhone || {};
+  const { name, image } = singlePhone || {};
 
-
-  const handleFavorite =() =>{
-    addFavorite(singlePhone)
-  }
-
-
-
+  const handleFavorite = () => {
+    addFavorite(singlePhone);
+  };
 
   return (
     <div className="w-full py-12">
@@ -43,9 +29,7 @@ const PhoneDetails = () => {
       </div>
 
       {/* Details */}
-      <div>
-        
-      </div>
+      <div></div>
     </div>
   );
 };
